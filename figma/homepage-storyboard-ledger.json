@@ -1,0 +1,36 @@
+{
+  "fileKey": "lWm5JqqHfxP3yDaeHdVIx8",
+  "fileUrl": "https://www.figma.com/design/lWm5JqqHfxP3yDaeHdVIx8?node-id=7-3",
+  "page": {
+    "id": "7:2",
+    "name": "03 Homepage Storyboard"
+  },
+  "fullStory": {
+    "id": "7:3",
+    "name": "Homepage / Desktop / Full Story",
+    "width": 1440,
+    "height": 10560
+  },
+  "sections": [
+    { "id": "8:2", "name": "01 Hero / Access Path" },
+    { "id": "9:2", "name": "02 Review Gap" },
+    { "id": "9:52", "name": "03 Editorial Pause" },
+    { "id": "10:2", "name": "04 Platform / Map Rules Review" },
+    { "id": "11:2", "name": "05 Product Detail Sequence" },
+    { "id": "11:65", "name": "06 Roles and Use Cases" },
+    { "id": "12:2", "name": "07 Trust and EU Readiness" },
+    { "id": "12:46", "name": "08 Product Proof" },
+    { "id": "12:76", "name": "09 Pricing Orientation" },
+    { "id": "13:2", "name": "10 FAQ" },
+    { "id": "13:30", "name": "11 Closing Conversion" },
+    { "id": "13:41", "name": "12 Footer" }
+  ],
+  "qa": {
+    "directSectionCount": 12,
+    "textNodeCount": 335,
+    "sectionOverlaps": 0,
+    "outOfBoundsSections": 0,
+    "textAbove68px": 0,
+    "emptyTextNodes": 0
+  }
+}

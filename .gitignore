@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+
+# Local tooling and deployment state
+.tools/
+.vercel/
+*.log
+
+# Environment files
+.env*
+!.env.example
+
+# Local QA and scaffold artifacts
+artifacts/
+outputs/
+work/
+design-qa.md
+
+# Operating system files
+.DS_Store

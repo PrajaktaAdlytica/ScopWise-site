@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 188" role="img" aria-labelledby="title desc">
+  <title id="title">Scopwise reverse logo</title>
+  <desc id="desc">White Scopwise logo for dark backgrounds.</desc>
+  <defs>
+    <mask id="scopwise-horizontal-cutout-reverse">
+      <rect width="264" height="188" fill="white"/>
+      <path d="M171 64C151 66 138 68 130 74C120 82 128 91 143 98L165 108C177 114 181 120 174 126C168 132 154 134 137 136L103 139C126 136 141 132 144 125C148 116 134 111 119 104C103 96 91 88 94 80C97 72 111 69 130 67Z" fill="black"/>
+    </mask>
+  </defs>
+  <path d="M68 18L256 0Q260 0 260 4V43Q260 47 256 47L68 65Q64 65 64 61V22Q64 18 68 18Z" fill="#FFFFFF"/>
+  <path d="M8 80L256 56Q260 56 260 60V100Q260 104 256 104L8 128Q4 128 4 124V84Q4 80 8 80Z" fill="#FFFFFF" mask="url(#scopwise-horizontal-cutout-reverse)"/>
+  <path d="M8 140L198 122Q202 122 202 126V166Q202 170 198 170L8 188Q4 188 4 184V144Q4 140 8 140Z" fill="#FFFFFF"/>
+  <text x="304" y="137" fill="#FFFFFF" font-family="Avenir Next, Manrope, Arial, sans-serif" font-size="112" font-weight="400" letter-spacing="0">Scopwise</text>
+</svg>

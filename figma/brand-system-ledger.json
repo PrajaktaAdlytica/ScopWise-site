@@ -1,0 +1,25 @@
+{
+  "runId": "scopwise-brand-v1-2026-07-17",
+  "fileKey": "lWm5JqqHfxP3yDaeHdVIx8",
+  "fileUrl": "https://www.figma.com/design/lWm5JqqHfxP3yDaeHdVIx8",
+  "pageId": "0:1",
+  "rootId": "2:2",
+  "selectedBrand": {
+    "pageId": "4:2",
+    "rootId": "4:3",
+    "runId": "scopwise-selected-brand-v1-2026-07-17"
+  },
+  "directions": {
+    "evidenceGarden": "2:8",
+    "prismLedger": "2:50",
+    "signalAtelier": "2:92"
+  },
+  "variableCollections": {
+    "colors": "VariableCollectionId:2:226",
+    "spacing": "VariableCollectionId:2:238"
+  },
+  "components": {
+    "primaryButton": "2:258",
+    "secondaryButton": "2:260"
+  }
+}
