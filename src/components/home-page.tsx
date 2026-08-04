@@ -196,6 +196,7 @@ function EntryExperience() {
     ["Rules", "/product/rules"],
     ["Review", "/product/review"],
     ["Company", "/company"],
+    ["Funding", "/news/scopwise-funding-2026"],
   ] as const;
 
   return (
@@ -497,6 +498,7 @@ function SiteHeader({ followsEntry = false }: { followsEntry?: boolean }) {
           </div>
           <a className="nav-link" href="#pricing">Pricing</a>
           <a className="nav-link" href="/company">Company</a>
+          <a className="nav-link" href="/news/scopwise-funding-2026">Funding</a>
         </nav>
         <div className="header-actions">
           <a className="nav-link contact-link" href="mailto:hello@scopwise.com">Contact</a>
@@ -517,6 +519,7 @@ function SiteHeader({ followsEntry = false }: { followsEntry?: boolean }) {
               {productLinks.map(([name, , icon, href]) => <a key={name} href={href} onClick={() => setMobileOpen(false)}><Image src={icon} alt="" width={20} height={20} /> Scopwise {name}<ArrowRight size={17} /></a>)}
               <span className="mini-label">Company</span>
               <a href="/company" onClick={() => setMobileOpen(false)}>Company <ArrowRight size={17} /></a>
+              <a href="/news/scopwise-funding-2026" onClick={() => setMobileOpen(false)}>Funding <ArrowRight size={17} /></a>
               <a href="#pricing" onClick={() => setMobileOpen(false)}>Pricing <ArrowRight size={17} /></a>
               <a href="mailto:hello@scopwise.com">Contact <ArrowUpRight size={17} /></a>
               <a href="/sign-in" onClick={() => setMobileOpen(false)}><LockKeyhole size={18} /> Sign in <ArrowRight size={17} /></a>

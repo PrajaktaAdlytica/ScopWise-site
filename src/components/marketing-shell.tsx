@@ -72,6 +72,7 @@ export function MarketingHeader() {
             ) : null}
           </div>
           <Link className={`nav-link ${pathname === "/company" ? "active" : ""}`} href="/company">Company</Link>
+          <Link className={`nav-link ${pathname.startsWith("/news/") ? "active" : ""}`} href="/news/scopwise-funding-2026">Funding</Link>
           <Link className="nav-link" href="/#pricing">Pricing</Link>
         </nav>
         <div className="header-actions">
@@ -92,7 +93,7 @@ export function MarketingHeader() {
             {products.map(([name, , icon, href]) => <Link key={name} href={href}><Image src={icon} alt="" width={20} height={20} /> Scopwise {name}<ArrowRight size={17} /></Link>)}
             <span className="mini-label">Company</span>
             <Link href="/company"><span />Company <ArrowRight size={17} /></Link>
-            <Link href="/news/scopwise-funding-2026"><span />Funding announcement <ArrowRight size={17} /></Link>
+            <Link href="/news/scopwise-funding-2026"><span />Funding <ArrowRight size={17} /></Link>
             <Link href="/#pricing"><span />Pricing <ArrowRight size={17} /></Link>
             <Link href="/sign-in"><span />Sign in <ArrowRight size={17} /></Link>
             <a href="mailto:hello@scopwise.com"><span />Contact <ArrowUpRight size={17} /></a>
