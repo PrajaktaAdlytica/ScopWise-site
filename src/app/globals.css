@@ -369,6 +369,69 @@ select:focus-visible {
   text-underline-offset: 3px;
 }
 
+.entry-funding-strip {
+  position: absolute;
+  z-index: 3;
+  top: 92px;
+  right: clamp(24px, 3.5vw, 58px);
+  left: clamp(24px, 3.5vw, 58px);
+  display: grid;
+  min-height: 54px;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 14px 10px 16px;
+  border: 1px solid rgba(23, 36, 58, 0.13);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  background: rgba(248, 247, 243, 0.88);
+  box-shadow: 0 12px 28px rgba(23, 36, 58, 0.08);
+  backdrop-filter: blur(12px);
+  grid-template-columns: auto 1fr auto auto;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.entry-funding-strip:hover {
+  background: rgba(248, 247, 243, 0.98);
+  transform: translateY(-2px);
+}
+
+.funding-strip-label {
+  padding: 5px 8px;
+  border-left: 3px solid var(--apricot);
+  border-radius: 2px;
+  background: var(--lavender);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.entry-funding-strip strong {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entry-funding-strip time {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.funding-strip-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.funding-strip-link svg { transition: transform 180ms ease; }
+.entry-funding-strip:hover .funding-strip-link svg { transform: translateX(3px); }
+
 .entry-menu-toggle {
   position: relative;
   z-index: 7;
@@ -2308,6 +2371,7 @@ details[open] .faq-icon::after { transform: rotate(0); }
 .detail-rules { --tag-bg: var(--butter); --tag-accent: var(--accent); }
 .detail-review { --tag-bg: var(--mint); --tag-accent: var(--accent); }
 .company-page { --tag-bg: var(--lavender); --tag-accent: var(--accent); }
+.funding-page { --tag-bg: var(--lavender); --tag-accent: var(--apricot); }
 .auth-page { --tag-bg: var(--sky); --tag-accent: var(--accent); }
 .demo-page { --tag-bg: var(--butter); --tag-accent: var(--accent); }
 .detail-workflow { --tag-bg: var(--lavender); --tag-accent: var(--apricot); }
@@ -2635,6 +2699,141 @@ details[open] .faq-icon::after { transform: rotate(0); }
 .company-model-list p { margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 19px; }
 .company-cta { background: var(--apricot); }
 .company-cta .button { margin-top: 28px; }
+
+/* Funding announcement */
+.funding-hero {
+  background: var(--sky);
+}
+
+.funding-hero-grid {
+  display: grid;
+  min-height: 590px;
+  align-items: end;
+  gap: 96px;
+  padding-top: 104px;
+  padding-bottom: 92px;
+  grid-template-columns: 8fr 4fr;
+}
+
+.funding-hero h1 {
+  max-width: 850px;
+  margin-top: 30px;
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.funding-hero h1 strong {
+  color: var(--accent);
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.funding-hero-meta {
+  padding: 6px 0 6px 28px;
+  border-left: 1px solid rgba(23, 36, 58, 0.24);
+}
+
+.funding-hero-meta > span,
+.funding-facts span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.funding-hero-meta time {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.funding-hero-meta p {
+  max-width: 350px;
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.funding-article { background: var(--paper); }
+
+.funding-article-grid {
+  display: grid;
+  align-items: start;
+  gap: 112px;
+  grid-template-columns: minmax(0, 8fr) minmax(250px, 3fr);
+}
+
+.funding-copy { max-width: 790px; }
+
+.funding-lead {
+  color: var(--ink);
+  font-size: 25px;
+  line-height: 38px;
+}
+
+.funding-lead a,
+.funding-copy > p a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.funding-copy h2 {
+  max-width: 680px;
+  margin-top: 60px;
+  font-size: 34px;
+  line-height: 42px;
+}
+
+.funding-copy > p:not(.funding-lead) {
+  max-width: 720px;
+  margin-top: 21px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 29px;
+}
+
+.funding-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 48px;
+}
+
+.funding-facts {
+  position: sticky;
+  top: 112px;
+  border-top: 1px solid var(--line);
+}
+
+.funding-facts > div {
+  padding: 18px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.funding-facts strong,
+.funding-facts time,
+.funding-facts a {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 7px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.funding-facts a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.funding-profile-links a + a { margin-top: 5px; }
+
+.funding-closing { background: var(--mint); }
+.funding-closing .text-link { margin-top: 28px; }
 
 /* Sign in and request demo */
 .auth-section,
@@ -3011,6 +3210,24 @@ details[open] .faq-icon::after { transform: rotate(0); }
   :root { --header-height: 64px; }
 
   .entry-nav { padding: 20px 24px; }
+  .entry-funding-strip {
+    top: 82px;
+    right: 24px;
+    left: 24px;
+    grid-template-columns: 1fr auto;
+    gap: 5px 18px;
+    padding: 12px 14px;
+  }
+  .funding-strip-label { display: none; }
+  .entry-funding-strip strong {
+    overflow: visible;
+    white-space: normal;
+  }
+  .entry-funding-strip time { grid-column: 1; }
+  .funding-strip-link {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
   .entry-brand img { width: 142px; }
   .entry-desktop-links,
   .entry-contact { display: none; }
@@ -3150,10 +3367,44 @@ details[open] .faq-icon::after { transform: rotate(0); }
   .trust-grid { gap: 54px; }
   .testimonials-sticky { gap: 42px; }
   .footer-top { grid-template-columns: 1fr; gap: 54px; }
+
+  .funding-hero-grid,
+  .funding-article-grid {
+    grid-template-columns: 1fr;
+  }
+  .funding-hero-grid {
+    min-height: 0;
+    gap: 52px;
+    padding: 86px 0 74px;
+  }
+  .funding-hero h1 { font-size: 48px; line-height: 56px; }
+  .funding-hero-meta {
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(23, 36, 58, 0.18);
+    border-left: 0;
+  }
+  .funding-article-grid { gap: 62px; }
+  .funding-facts {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 28px;
+  }
 }
 
 @media (max-width: 620px) {
   .entry-nav { padding: 18px 20px; }
+  .entry-funding-strip {
+    top: 72px;
+    right: 20px;
+    left: 20px;
+    gap: 4px 12px;
+    padding: 10px 12px;
+  }
+  .entry-funding-strip strong { font-size: 12px; line-height: 16px; }
+  .entry-funding-strip time { font-size: 10px; }
+  .funding-strip-link { font-size: 0; }
+  .funding-strip-link svg { width: 18px; height: 18px; }
   .entry-brand img { width: 132px; }
   .entry-mobile-overlay { padding-inline: 24px; }
   .entry-mobile-overlay a { font-size: 28px; }
@@ -3189,6 +3440,16 @@ details[open] .faq-icon::after { transform: rotate(0); }
   .hero-visual { width: 700px; bottom: -32px; transform: translateX(50%) scale(0.64); }
   .hero-band { display: none; }
   .next-chapter { padding-inline: 20px; }
+
+  .funding-hero-grid { gap: 42px; padding: 68px 0 58px; }
+  .funding-hero h1 { font-size: 38px; line-height: 45px; }
+  .funding-article { padding: 72px 0; }
+  .funding-article-lead { font-size: 22px; line-height: 33px; }
+  .funding-copy h2 { font-size: 30px; line-height: 37px; }
+  .funding-actions { flex-direction: column; }
+  .funding-actions .button { width: 100%; }
+  .funding-facts { grid-template-columns: 1fr; }
+  .funding-closing { padding: 72px 0; }
 
   .review-gap { padding: 76px 0; }
   .review-gap-copy > p { font-size: 16px; line-height: 25px; }

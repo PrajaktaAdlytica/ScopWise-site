@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 const routes = [
   "",
   "/company",
+  "/news/scopwise-funding-2026",
   "/product/map",
   "/product/rules",
   "/product/review",
