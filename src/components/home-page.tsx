@@ -237,6 +237,12 @@ function EntryExperience() {
         {entryLinks.map(([label, href]) => <a href={href} onClick={() => setMobileOpen(false)} key={label}>{label}</a>)}
         <a href="/request-demo" onClick={() => setMobileOpen(false)}>Request a demo</a>
       </div>
+      <a className="entry-funding-strip" href="/news/scopwise-funding-2026">
+        <span className="funding-strip-label">Funding announcement</span>
+        <strong>Scopwise announces $525K in funding from TipHub</strong>
+        <time dateTime="2026-03-13">13 March 2026</time>
+        <span className="funding-strip-link">Read announcement <ArrowRight size={15} /></span>
+      </a>
       <div className="entry-content">
         <p className="entry-intro" id="entry-title">Meet Scopwise,<br />your agent access governance layer.</p>
         <p className="entry-typewriter">
@@ -1090,15 +1096,17 @@ function Footer() {
           <div className="footer-links">
             <div><span>Product</span><a href="/product/map">Map</a><a href="/product/rules">Rules</a><a href="/product/review">Review</a><a href="#platform">Platform</a></div>
             <div><span>Solutions</span><a href="#use-cases">Security review</a><a href="#use-cases">AI platform teams</a><a href="#use-cases">Compliance</a><a href="#use-cases">Internal audit</a></div>
-            <div><span>Company</span><a href="/company">Company</a><a href="mailto:hello@scopwise.com">Contact</a><a href="#trust">Security</a></div>
+            <div><span>Company</span><a href="/company">Company</a><a href="/news/scopwise-funding-2026">Funding announcement</a><a href="https://www.crunchbase.com/organization/scopwise" target="_blank" rel="noreferrer">Crunchbase</a><a href="https://www.linkedin.com/company/scopwise/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:hello@scopwise.com">Contact</a><a href="#trust">Security</a></div>
             <div><span>Legal</span><a href="mailto:legal@scopwise.com?subject=Scopwise%20privacy">Privacy</a><a href="mailto:legal@scopwise.com?subject=Scopwise%20terms">Terms</a><small>No tracking cookies</small></div>
           </div>
         </div>
         <div className="footer-bottom">
           <span>Poland / European Union</span>
-          <div className="social-links" aria-label="Social links prepared for official Scopwise profiles">
+          <div className="social-links" aria-label="Scopwise social links">
+            <a className="social-placeholder social-link" href="https://www.linkedin.com/company/scopwise/" target="_blank" rel="noreferrer" aria-label="Scopwise on LinkedIn">
+              <Image src="/icons/social/linkedin.svg" alt="" width={18} height={18} />
+            </a>
             {[
-              ["LinkedIn", "/icons/social/linkedin.svg"],
               ["X", "/icons/social/x.svg"],
               ["GitHub", "/icons/social/github.svg"],
               ["YouTube", "/icons/social/youtube.svg"],

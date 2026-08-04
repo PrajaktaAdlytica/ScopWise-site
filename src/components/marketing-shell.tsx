@@ -92,6 +92,7 @@ export function MarketingHeader() {
             {products.map(([name, , icon, href]) => <Link key={name} href={href}><Image src={icon} alt="" width={20} height={20} /> Scopwise {name}<ArrowRight size={17} /></Link>)}
             <span className="mini-label">Company</span>
             <Link href="/company"><span />Company <ArrowRight size={17} /></Link>
+            <Link href="/news/scopwise-funding-2026"><span />Funding announcement <ArrowRight size={17} /></Link>
             <Link href="/#pricing"><span />Pricing <ArrowRight size={17} /></Link>
             <Link href="/sign-in"><span />Sign in <ArrowRight size={17} /></Link>
             <a href="mailto:hello@scopwise.com"><span />Contact <ArrowUpRight size={17} /></a>
@@ -120,15 +121,17 @@ export function MarketingFooter() {
           <div className="footer-links">
             <div><span>Product</span><Link href="/product/map">Map</Link><Link href="/product/rules">Rules</Link><Link href="/product/review">Review</Link><Link href="/#platform">Platform</Link></div>
             <div><span>Solutions</span><Link href="/#use-cases">Security review</Link><Link href="/#use-cases">AI platform teams</Link><Link href="/#use-cases">Compliance</Link><Link href="/#use-cases">Internal audit</Link></div>
-            <div><span>Company</span><Link href="/company">Company</Link><a href="mailto:hello@scopwise.com">Contact</a><Link href="/#trust">Security</Link></div>
+            <div><span>Company</span><Link href="/company">Company</Link><Link href="/news/scopwise-funding-2026">Funding announcement</Link><a href="https://www.crunchbase.com/organization/scopwise" target="_blank" rel="noreferrer">Crunchbase</a><a href="https://www.linkedin.com/company/scopwise/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:hello@scopwise.com">Contact</a><Link href="/#trust">Security</Link></div>
             <div><span>Access</span><Link href="/sign-in">Sign in</Link><Link href="/request-demo">Request demo</Link><a href="mailto:legal@scopwise.com?subject=Scopwise%20privacy">Privacy</a></div>
           </div>
         </div>
         <div className="footer-bottom">
           <span>Poland / European Union</span>
-          <div className="social-links" aria-label="Social links prepared for official Scopwise profiles">
+          <div className="social-links" aria-label="Scopwise social links">
+            <a className="social-placeholder social-link" href="https://www.linkedin.com/company/scopwise/" target="_blank" rel="noreferrer" aria-label="Scopwise on LinkedIn">
+              <Image src="/icons/social/linkedin.svg" alt="" width={18} height={18} />
+            </a>
             {[
-              ["LinkedIn", "/icons/social/linkedin.svg"],
               ["X", "/icons/social/x.svg"],
               ["GitHub", "/icons/social/github.svg"],
               ["YouTube", "/icons/social/youtube.svg"],
